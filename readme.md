@@ -18,3 +18,11 @@ brew install confluent-cli
 Docker:
 brew install --cask docker
 
+Jq:
+brew install jq
+
+
+
+export XXX=$(confluent environment create confluent-cloud-playground3 -o json | jq -r '.id')
+confluent environment use $XXX
+
